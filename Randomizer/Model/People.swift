@@ -9,7 +9,11 @@
 import Foundation
 import CoreData
 
-convenience init(name: String, context: NSManagedObjectContext = CoreDataStack.context) {
-    self.init(context: context)
-    self.name = name
+extension People {
+    
+   @discardableResult convenience init(name: String, context: NSManagedObjectContext = CoreDataStack.context) {
+        self.init(context: context)
+        self.name = name
+    }
+    
 }

@@ -12,7 +12,7 @@ import CoreData
 class PeopleController {
     
     static let shared = PeopleController()
-
+    
     func create(person: String) {
         People(name: person)
         save()
@@ -26,8 +26,8 @@ class PeopleController {
         }
     }
     
-    func delete(entry: People) {
-        CoreDataStack.context.delete(entry)
+    func delete(person: People) {
+        CoreDataStack.context.delete(person)
         save()
     }
     
